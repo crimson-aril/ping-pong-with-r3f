@@ -1,0 +1,31 @@
+{
+  "name": "ping-pong-with-r3f",
+  "homepage": "https://crimson-aril.github.io/ping-pong-with-r3f",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "5.1",
+    "vite": "^7.3.1",
+    "vite-plugin-restart": "^2.0.0",
+    "gh-pages": "^5.0.0"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "@react-three/postprocessing": "^3.0.4",
+    "@react-three/rapier": "^2.2.0",
+    "r3f-perf": "^7.2.3",
+    "react": "19.2",
+    "react-dom": "19.2",
+    "three": "^0.182.0",
+    "zustand": "5.0"
+  }
+}

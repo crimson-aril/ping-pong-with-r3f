@@ -1,0 +1,99 @@
+/* 
+  Make the HTML, body, and root div fill the entire screen
+  and fix them in place so our 3D canvas always covers the viewport
+*/
+html,
+body,
+#root {
+    position: fixed;  /* Fix the element so it doesn't scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ivory;  /* Background color behind the 3D canvas */
+}
+
+/**
+ * Interface overlay
+ * This div sits on top of the canvas for UI elements like score, time, etc.
+ */
+.interface {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through to the canvas below */
+    font-family: 'Bebas Neue', cursive; /* Cool stylized font for the interface */
+}
+
+/**
+ * Time display
+ * Shows the game time or timer on the screen
+ */
+.time {
+    position: absolute; /* Position relative to the interface container */
+    top: 15%;  /* 15% from top of the screen */
+    left: 0;
+    width: 100%;
+    color: #ffffff;  /* White text for visibility */
+    font-size: 6vh;  /* Responsive size based on viewport height */
+    background: #00000033; /* Semi-transparent black background */
+    padding-top: 5px;
+    text-align: center; /* Center the text horizontally */
+}
+
+/**
+ * Restart button
+ * Clickable text to restart the game
+ */
+.restart {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    position: absolute;
+    top: 40%;  /* Positioned in the middle-ish of the screen */
+    left: 0;
+    width: 100%;
+    color: #ffffff;  /* White text */
+    font-size: 80px;  /* Big font for prominence */
+    background: #00000033;  /* Semi-transparent overlay */
+    padding-top: 10px;
+    pointer-events: auto;  /* Enable clicking */
+    cursor: pointer;  /* Show hand cursor on hover */
+}
+
+/**
+ * Controls UI
+ * Shows keyboard buttons at the bottom of the screen
+ */
+.controls {
+    position: absolute;
+    bottom: 10%;  /* 10% from the bottom */
+    left: 0;
+    width: 100%;
+}
+
+/* Arrange keys in a row */
+.controls .raw {
+    display: flex;
+    justify-content: center; /* Center all keys horizontally */
+}
+
+/* Individual key style */
+.controls .key {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    border: 2px solid #ffffff;
+    background: #ffffff44; /* Transparent white background */
+}
+
+/* Make larger keys like spacebar bigger */
+.controls .key.large {
+    width: 144px;
+}
+
+/* Active key highlight when pressed */
+.controls .key.active {
+    background: #ffffff99; /* Brighter to indicate it's active */
+}
