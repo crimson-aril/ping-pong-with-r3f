@@ -33,7 +33,7 @@ export function BlockStart({ position = [0, 0, 0] }) {
       {/* Floating 3D Text */}
       <Float floatIntensity={0.25} rotationIntensity={0.25}>
         <Text
-          font="/bebas-neue-v9-latin-regular.woff"
+          font="bebas-neue-v9-latin-regular.woff"
           scale={0.5}
           maxWidth={0.25}
           lineHeight={0.75}
@@ -65,7 +65,7 @@ export function BlockStart({ position = [0, 0, 0] }) {
  * - Hamburger model as reward
  */
 export function BlockEnd({ position = [0, 0, 0] }) {
-  const hamburger = useGLTF('/hamburger.glb') // Load 3D model
+  const hamburger = useGLTF('hamburger.glb') // Load 3D model
 
   // Make all meshes cast shadows
   hamburger.scene.children.forEach((mesh) => (mesh.castShadow = true))
