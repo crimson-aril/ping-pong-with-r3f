@@ -72,7 +72,7 @@ export function BlockEnd({ position = [0, 0, 0] }) {
 
   return (
     <group position={position}>
-      <Text font={new URL('/bebas-neue-v9-latin-regular.woff', import.meta.url).href} scale={1} position={[0, 2.25, 2]}>
+      <Text font={new URL('bebas-neue-v9-latin-regular.woff', import.meta.url).href} scale={1} position={[0, 2.25, 2]}>
         FINISH
         <meshBasicMaterial toneMapped={false} />
       </Text>
